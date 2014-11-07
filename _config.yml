@@ -3,10 +3,8 @@ title: CMR User guides
 email: felipe@crssoftware.co.nz
 description: > 
     User guides to help you run a high performance farm with Cash Manager Rural
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+baseurl: "/cmr-guides" # the subpath of your site, e.g. /blog/
+url: "http://felipeskroski.github.io" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
