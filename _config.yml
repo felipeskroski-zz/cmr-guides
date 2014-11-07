@@ -1,0 +1,37 @@
+# Site settings
+title: CMR User guides
+email: felipe@crssoftware.co.nz
+description: > 
+    User guides to help you run a high performance farm with Cash Manager Rural
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://yourdomain.com" # the base hostname & protocol for your site
+twitter_username: jekyllrb
+github_username:  jekyll
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+slim:
+  pretty: true
+  format: html5
+exclude: [
+            package.json, 
+            bower.json, 
+            grunt.js,
+            gruntfile.js, 
+            node_modules, 
+            bower_components,
+            validation-report.json, 
+            validation-status.json,
+            scripts.js, 
+            scripts.tmp.min.js,
+            style.css,
+            style.tmp.min.css,
+            Makefile,
+            Gemfile,
+            Gemfile.lock,
+            feed.xml,
+            exclude.rsync,
+            README.markdown
+         ]
+

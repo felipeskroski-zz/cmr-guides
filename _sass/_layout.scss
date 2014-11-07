@@ -1,0 +1,118 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+$green: #89990B;
+$border-color: rgba(0,0,0,.05);
+$text-color: #666;
+$link-color: #2a7ae2;
+$arrow-color: #aaa;
+body{
+  background: #f7f7f7;
+  font-family: 'Lato', sans-serif;
+  color: $text-color;
+}
+h1,h2,h3,h4{
+  font-weight: 400;
+  font-family: 'Lato', sans-serif;
+}
+header{
+  background: white;
+  padding: 20px 0;
+  h2{
+    font-size: 20px;
+    margin: 0;
+    a{
+      position: relative; 
+      padding-left: 40px;
+      color: $text-color;
+      font-weight: bold; 
+    }
+    a:before{
+      content: "";
+      height: 35px;
+      width: 35px; 
+      background: transparent url(/assets/img/logo-cmr.svg) no-repeat left top; 
+      display: block;
+      position: absolute; 
+      top: -7px; 
+    }
+  }
+}
+.jumbotron h1{
+  font-size: 48px; 
+  font-weight: bold;
+}
+.page-list{
+  &.page-list-small{
+    span.number{
+      font-size: 18px;
+      height: 40px;
+      width: 40px;
+      line-height: 40px;
+    }
+    h3{
+      margin-top: 4px;
+    }
+  }
+  margin: 0; 
+  padding: 0;
+  a{
+    color: $text-color;
+    transition: all 0.3s ease-in-out;
+
+  }
+  a:hover{
+    text-decoration: none;
+    color: $link-color;
+    span.number{
+      background: lighten($green, 10%);
+    }
+    li:after{
+      right: 0px;
+    }
+  }
+  li{
+    list-style: none;
+    margin: 0;
+    padding: 20px 0;
+    border-bottom: 1px solid $border-color;
+    position: relative;
+    &:after{
+      content: "";
+      height: 30px; 
+      width: 30px; 
+      border-top: 2px solid $arrow-color;
+      border-right: 2px solid $arrow-color;
+      position: absolute; 
+      right: 20px;
+      transition: all 0.3s ease-in-out;
+      top: 50%; 
+      margin-top: -15px;
+      transform: rotate(45deg);
+    }
+  }
+  span.number{
+    transition: all 0.3s ease-in-out;
+    display: block;
+    color: white;
+    font-size: 24px;
+    height: 60px;
+    width: 60px;
+    background: $green;
+    border-radius: 40px;
+    line-height: 60px;
+    text-align: center;
+    float: left;
+    margin-right: 20px; 
+  }
+  .badge{
+    position: relative; 
+    top: -4px; 
+    font-weight: normal; 
+    text-transform: uppercase;
+    margin-left: 10px;
+    padding: 5px 8px 4px;
+    border-radius: 4px;
+  }
+  h3{
+    margin-bottom: 8px;
+  }
+}

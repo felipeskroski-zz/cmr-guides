@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <ul class="page-list">
+        {% assign index = 0 %}
+        {% assign sorted = site.pages | sort: "url" %}
+        {% for page in sorted %}
+          {% if page.section-landing %}
+          <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">
+            <li>
+              
+                {% capture index %}{{ index | plus:1 }}{% endcapture %}
+                <span class="number">{{index}}</span>
+                <h3>{{ page.title }}<span class="badge">{{page.level}}</span></h3>
+                <p>{{ page.description }}</p>
+                
+              
+            </li>
+            </a>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>

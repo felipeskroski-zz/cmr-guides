@@ -1,0 +1,105 @@
+---
+layout: page
+title: Pay your bills
+section-landing: false
+section: run-farm
+---
+<script>
+$( document ).ready(function() {
+  $('input[type=radio][name=havemoney]').on('change', function (){
+    console.log(this.value);
+    if (this.value == 'yes') {
+      $('#yes').collapse('show');
+      $('#no').collapse('hide');
+    }
+    else if (this.value == 'no') {
+      $('#yes').collapse('hide');
+      $('#no').collapse('show');
+    } 
+  })
+});
+</script>
+
+<h2>Mark the completed items: </h2>
+<div class="checkbox">
+  <label>
+    <input type="checkbox" value="">
+    Do you have any bills? 
+  </label>
+</div>
+<div class="checkbox">
+  <label>
+    <input type="checkbox" value="">
+    Are they accurate?
+  </label>
+</div>
+<div>
+  <h4>Do you have enough money to pay all of this month's bills and next month's expected bills?</h4>
+  <label class="radio-inline">
+  <input type="radio" name="havemoney" id="radio1" value="yes"> Yes
+</label>
+<label class="radio-inline">
+  <input type="radio" name="havemoney" id="radio2" value="no"> No or not sure
+</label>
+</div>
+
+
+<div id="yes" class="collapse">
+  <div class="checkbox">
+  <label>
+    <input type="checkbox" value="">
+      Import and code trader statement transactions.
+    </label>
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" value="">
+      Import and code bank transactions and add physical information (eg: quantities).
+    </label>
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" value="">
+      Reconcile your bank statement.
+    </label>
+  </div>
+</div>
+
+<div id="no" class="collapse">
+  <div class="checkbox">
+  <label>
+    <input type="checkbox" value="">
+      Reconcile your current bank statement 
+    </label>
+  </div>
+  <div class="checkbox">
+  <label>
+    <input type="checkbox" value="">
+      Import and code trader statement accounts
+    </label>
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" value="">
+      Record other bills to be paid
+    </label>
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" value="">
+      Record regular payments (direct debits, automatic payments, bank transfers)
+    </label>
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" value="">
+      Check to see how much you can spend and either organise access to more funds (eg talk to the bank) or select bills not to pay
+    </label>
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" value="">
+      Pay bills through internet banking.
+    </label>
+  </div>
+</div>
