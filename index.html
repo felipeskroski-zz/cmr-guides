@@ -1,11 +1,20 @@
 ---
-layout: default
+layout: base
 ---
-
+<div class="banner">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>CMR user guides</h1>
+        <p class="lead">Learn the best tricks to boost your farm performance with Cash Manager Rural</p>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <ul class="page-list">
+      <ul class="page-list page-list-gap">
         {% assign index = 0 %}
         {% assign sorted = site.pages | sort: "url" %}
         {% for page in sorted %}

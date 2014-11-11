@@ -1,13 +1,20 @@
 ---
 layout: default
 ---
+<div class="jumbotron">
+  <div class="container">
+    <h1><a onClick="history.back(-1)" class="btn-back">←</a>{{page.title}}</h1>
+  </div>
+</div>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <h1><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{page.title}}</a></h1>
       <article>
         {{ content }}
       </article>
+      <hr class="spaced-line">
+      {% include comments.html %}
     </div>
   </div>
 </div>
+
